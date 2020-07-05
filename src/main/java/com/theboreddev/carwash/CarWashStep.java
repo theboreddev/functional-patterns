@@ -10,3 +10,4 @@ public abstract class CarWashStep {
     }
     abstract Car applyTo(Car car);
 }
+

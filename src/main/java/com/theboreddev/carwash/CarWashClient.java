@@ -7,14 +7,14 @@ public class CarWashClient {
     public static void main(String[] args) {
 
         final Car car = new Car();
-        Function<Car, Car> initial = c -> new Car(WashState.INITIAL);
+        Function<Car, Car> initial = c -> new Car();
 
         final Function<Car, Car> chain = initial
-                .andThen(c1 -> new Car(WashState.INITIAL_WASH))
-                .andThen(c2 -> new Car(WashState.SOAP))
-                .andThen(c3 -> new Car(WashState.RINSED))
-                .andThen(c4 -> new Car(WashState.POLISHED))
-                .andThen(c5 -> new Car(WashState.DRIED));
+                .andThen(c1 -> c1.updateState(WashState.INITIAL_WASH))
+                .andThen(c2 -> c2.updateState(WashState.SOAP))
+                .andThen(c3 -> c3.updateState(WashState.RINSED))
+                .andThen(c4 -> c4.updateState(WashState.POLISHED))
+                .andThen(c5 -> c5.updateState(WashState.DRIED));
 
         final Car finalCar = chain.apply(car);
 
