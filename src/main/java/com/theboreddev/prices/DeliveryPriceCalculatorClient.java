@@ -15,9 +15,9 @@ public class DeliveryPriceCalculatorClient {
 
         //Functional style
         final Item item = new Item(1L, new BigDecimal("12.99"));
-        System.out.println("Delivery price is " + Plan.BASIC.deliveryPrice.apply(newItem));
-        System.out.println("Delivery price is " + Plan.PREMIUM.deliveryPrice.apply(newItem));
-        System.out.println("Delivery price is " + Plan.BUSINESS.deliveryPrice.apply(newItem));
+        System.out.println("Delivery price is " + Plan.BASIC.deliveryPrice.apply(item));
+        System.out.println("Delivery price is " + Plan.PREMIUM.deliveryPrice.apply(item));
+        System.out.println("Delivery price is " + Plan.BUSINESS.deliveryPrice.apply(item));
 
     }
 }
