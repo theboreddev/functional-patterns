@@ -8,3 +8,4 @@ public class BusinessDeliveryPriceCalculator implements DeliveryPriceCalculator 
         return new BigDecimal("1.0");
     }
 }
+

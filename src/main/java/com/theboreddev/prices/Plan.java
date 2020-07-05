@@ -5,3 +5,4 @@ public enum Plan {
     PREMIUM,
     BUSINESS
 }
+

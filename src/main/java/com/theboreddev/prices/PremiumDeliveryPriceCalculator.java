@@ -8,3 +8,4 @@ public class PremiumDeliveryPriceCalculator implements DeliveryPriceCalculator {
         return item.price().multiply(new BigDecimal("0.015")).add(new BigDecimal("1.0"));
     }
 }
+
